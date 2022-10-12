@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+<div class="card border-light mt-3 mb-5 ">
+<div class="card-body">
+<h2 class="text-center mt-2 mb-2">Bienvenue {% if app.user %}{{app.user.pseudo}}, que vas-tu hachetter aujourd'hui ?{% else %}
+  sur Hachette {% endif %}</h2>
+  </div>
+  </div>
+
+<div class="container text-center mt-4 card border-primary"style=" min-height: 80vh;"> 
+<div class="row justify-content-md-between p-4">
+{% for item in produits %}
+    {% if item.stock > 0 %}
+    
+    <div class="card text-white col-3 m-3 border-light ">
+    <div class="card-header text-center"> {{ item.titre }} </div>
+    <div class="card-body text-center">
+        
+        <img class="text-center img-fluid" src="{{ item.photo }}" alt="" >
+        <hr>
+        <p>Prix : {{ item.prix }} €</p>
+
+        <a href="{{path('app_show', {id: item.id})}}" class="btn btn-success"> Commander</a>
+    </div>
+    </div>
+    {% endif %}
+{% endfor %}
+</div>
+</div>
+
+
+{% endblock %}
