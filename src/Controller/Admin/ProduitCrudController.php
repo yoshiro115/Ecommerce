@@ -30,7 +30,7 @@ class ProduitCrudController extends AbstractCrudController
             TextareaField::new('description')->setMaxLength(20),
             DateTimeField::new('date_enregistrement')->setFormat('d/M/Y à H:m:s')->hideOnForm(),
             ChoiceField::new('couleur')->setChoices(['rouge'=>"rouge", "bleu"=>"bleu", "blanc"=>"blanc", "jaune"=>"jaune"]),
-            ChoiceField::new('taille')->setChoices(['S'=> "s", "M"=>"m", "L" => "l", "XL"=>"xl"]),
+            ChoiceField::new('taille')->setChoices(['S'=> "S", "M"=>"M", "L" => "L", "XL"=>"XL"]),
             ChoiceField::new('collection')->setChoices(['H'=>'homme', "F"=>"femme", "E" => "enfant"]),
             TextField::new('photo'),
             NumberField::new('prix')->setNumDecimals(2),

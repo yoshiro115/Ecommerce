@@ -24,7 +24,11 @@
                 <tr>
                     <td> {{ item.produit.titre }} </td>
                     <td> {{ item.produit.prix }} € </td>
-                    <td> {{ item.quantite }} </td>
+                    <td>
+                    <a href="{{path('cart_decrease', {id: item.produit.id} )}}"><i class="fas fa-minus mx-2"></i></a> 
+                    {{ item.quantite }} 
+                    <a href="{{path('cart_adding', {id: item.produit.id} )}}"><i class="fas fa-plus mx-2"></i></a> 
+                    </td> 
                     <td> {{item.produit.prix * item.quantite}} €</td>
                     <td> <a href="{{path('cart_remove', {id: item.produit.id})}}" class="btn-sm btn-danger"> <i class="fa fa-trash"></i> </a> </td>
                 </tr>
@@ -40,6 +44,7 @@
     {% if app.user %}
     
         <a href="{{path('app_commande')}}" class="btn btn-primary">valider votre commande</a>
+        
     {% else %}
         <a href="{{path('app_login')}}" class="btn btn-success">se connecter</a> pour valider sa commande
     {% endif %}

@@ -85,4 +85,40 @@ class CartService
         return $total;
     }
 
+    public function decrease($id)
+    {
+        $session = $this->rs->getSession();
+        $cart = $session->get('cart', []);
+ 
+        if ($cart[$id] > 1) 
+        {
+            $cart[$id]--;
+        } else {
+ 
+            unset($cart[$id]);
+             
+        }
+        return $session->set('cart', $cart);
+    }
+
+    public function adding($id)
+    {
+        $session = $this->rs->getSession();
+
+        $cart = $session->get('cart', []);
+
+        if (!empty($cart[$id])) 
+        {
+            $cart[$id]++;
+        }
+        else
+        {
+            $cart[$id] = 1;
+        }
+
+        $session->set('cart', $cart);
+    }
+
+
+
 }
