@@ -28,4 +28,6 @@ nav{
     bottom: 0px;
     max-height: 40vh;
     width: auto;
+    z-index: auto;
 }
+
