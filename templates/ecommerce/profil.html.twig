@@ -68,7 +68,7 @@
 
 
 {% else %}
-{% if NewTotal != 0 %}<h1>{{NewTotal}}{% set NewTotal = 0  %}</h1>{% endif %}
+{% if NewTotal != 0 %}<h1>Prix Total de la commande : {{NewTotal}}€</h1>{% set NewTotal = 0  %}{% endif %}
 </div></div>
 <div class="card border-success mb-3" style="max-width: 80vw;">
             <div class="card-header"><h3>Commande du {{commande.dateEnregistrement|date("d/m/y à H:i:s")}}</h3></div>
@@ -91,7 +91,7 @@
 
     
 {% endfor %}
-{% if NewTotal != 0 %}<h1>Prix Total de la commande : {{NewTotal}}</h1>{% endif %}
+{% if NewTotal != 0 %}<h1>Prix Total de la commande : {{NewTotal}}€</h1>{% endif %}
 </div></div>
 
 

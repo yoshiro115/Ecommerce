@@ -26,7 +26,7 @@
 </div></div></div>
 {% if app.user %}
 <form method="POST" action="{{ path('cart_add', {id: produit.id }) }}" class="form-inline d-inline-block" >
-	<input type="number" name="addQuantite" placeholder="quantité ?" class="form-control mr-2" max="{{maxQuantite}}" min="0">
+	<input type="number" name="addQuantite" class="form-control mr-2" max="{{maxQuantite}}" min="1" value="1">
 	<button type="submit" class="btn btn-warning" > Ajouter au panier</button>
 </form>
 {% else %}
