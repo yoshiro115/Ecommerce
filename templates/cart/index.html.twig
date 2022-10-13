@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CartController!{% endblock %}
+{% block title %}Panier{% endblock %}
 
 {% block body %}
 
@@ -46,7 +46,7 @@
         <a href="{{path('app_commande')}}" class="btn btn-primary">valider votre commande</a>
         
     {% else %}
-        <a href="{{path('app_login')}}" class="btn btn-success">se connecter</a> pour valider sa commande
+        <a href="{{path('app_login')}}" class="btn btn-dark">se connecter</a> pour valider sa commande
     {% endif %}
 
 {% else %}

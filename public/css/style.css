@@ -1,0 +1,30 @@
+body{
+    background: rgb(154,6,6);
+    background: linear-gradient(90deg, rgba(154,6,6,1) 21%, rgba(15,2,13,1) 40%, rgba(18,18,17,1) 50%, rgba(0,0,0,1) 60%, rgba(154,6,6,1) 100%);
+}
+
+nav{
+    border-radius: 6px;
+    height: 8vh;
+    font-size: 1.5rem;
+}
+.btn-primary{
+    background-color: #9a0606;
+    border-color: #9a0606;
+}
+.btn-secondary{
+    background-color: #9219d2;
+    border-color: #9219d2;
+}
+.card.border-primary .card-header{
+    background-color: #9a0606!important;
+}
+.logo{
+    height: 6vh;
+    width: auto;
+}
+.partout{
+    position:fixed;
+    bottom: 0px;
+    
+}

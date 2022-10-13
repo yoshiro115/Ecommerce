@@ -16,7 +16,7 @@
 {% for item in produits %}
     {% if item.stock > 0 %}
     
-    <div class="card text-white col-3 m-3 border-light ">
+    <div id="responsive" class="card text-white col-3 m-3 border-primary ">
     <div class="card-header text-center"> {{ item.titre }} </div>
     <div class="card-body text-center">
         
@@ -24,7 +24,7 @@
         <hr>
         <p>Prix : {{ item.prix }} €</p>
 
-        <a href="{{path('app_show', {id: item.id})}}" class="btn btn-success"> Commander</a>
+        <a href="{{path('app_show', {id: item.id})}}" class="btn btn-dark"> Commander</a>
     </div>
     </div>
     {% endif %}

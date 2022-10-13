@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Home {% endblock %}
+{% block title %}Profil{% endblock %}
 
 {% block body %}
 <h1>Mon profil</h1>
 
-<div class="card border-info mx-auto mb-5" style="max-width: 60vw;">
+<div class="card border-dark mx-auto mb-5" style="max-width: 60vw;">
             <div class="card-header"> <h3>{{app.user.Pseudo}}</h3></div>
             <div class="card-body container">
             <div class="row">
@@ -14,7 +14,7 @@
                 <h4 class="subtitle col-6">Nom : {{app.user.nom}}</h4>
                 <h4 class="subtitle col-6">Prenom : {{app.user.prenom}}</h4>
                 
-                <h4 class="col-6 subtitle">Email : {{app.user.email}}</h4>
+                <h4 id="responsive" class="col-6 subtitle">Email : {{app.user.email}}</h4>
                 <h4 class="col-6 subtitle">Civilité : {{app.user.civilite}}</h4>            
                 
 
@@ -23,7 +23,7 @@
             <div class="container">
                 <div class="row">
                 <div class="col-10"></div>
-                    <div class="col-2"><a href="#" class="btn btn-warning">Modifier son Compte</a></div>
+                    <div class="col-2"><a href="#" class="btn btn-primary">Modifier son Compte</a></div>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
     
 
 {% elseif date == "" %}
-<div class="card border-success mb-3" style="max-width: 80vw;">
+<div class="card border-primary mb-3" style="max-width: 80vw;">
             <div class="card-header"><h3>Commande du {{commande.dateEnregistrement|date("d/m/y à H:i:s")}}</h3></div>
             <div class="card-body">
                 <h4 class="card-title">{{commande.produit.titre}}</h4>
@@ -71,7 +71,7 @@
 {% else %}
 {% if NewTotal != 0 %}<h1>Prix Total de la commande : {{NewTotal}}€</h1>{% set NewTotal = 0  %} {% set total = 0  %}{% endif %}
 </div></div>
-<div class="card border-success mb-3" style="max-width: 80vw;">
+<div class="card border-primary mb-3" style="max-width: 80vw;">
             <div class="card-header"><h3>Commande du {{commande.dateEnregistrement|date("d/m/y à H:i:s")}}</h3></div>
             <div class="card-body">
                 <h4 class="card-title">{{commande.produit.titre}}</h4>

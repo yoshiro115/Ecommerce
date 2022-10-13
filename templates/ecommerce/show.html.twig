@@ -27,7 +27,7 @@
 
 <form method="POST" action="{{ path('cart_add', {id: produit.id }) }}" class="form-inline d-inline-block" >
 	<input type="number" name="addQuantite" class="form-control mr-2" max="{{maxQuantite}}" min="1" value="1">
-	<button type="submit" class="btn btn-warning" > Ajouter au panier</button>
+	<button type="submit" class="btn btn-dark" > Ajouter au panier</button>
 </form>
 
 {% endblock %}
