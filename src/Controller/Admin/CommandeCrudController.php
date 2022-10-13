@@ -30,7 +30,7 @@ class CommandeCrudController extends AbstractCrudController
             IntegerField::new('quantite'),
             NumberField::new('montant'),
             ChoiceField::new('etat')->setChoices(['en cours de traitement'=>'en cours de traitement', 'envoyé'=>'envoyé', 'livré'=>"livré"]),
-            DateTimeField::new('date_enregistrement')->hideOnForm(),
+            DateTimeField::new('date_enregistrement')->setFormat('d/M/Y à H:m:s')->hideOnForm(),
             AssociationField::new('membre')->renderAsNativeWidget(),
             AssociationField::new('produit')->renderAsNativeWidget(),
             

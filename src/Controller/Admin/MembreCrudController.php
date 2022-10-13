@@ -38,7 +38,7 @@ class MembreCrudController extends AbstractCrudController
             TextField::new('password', "mot de passe")->setFormType(PasswordType::class)->onlyWhenCreating(),
             CollectionField::new('roles')->setTemplatePath('admin/field/roles.html.twig'),
             ChoiceField::new('civilite')->setChoices(['H'=>'homme', "F"=>"femme"]),
-            DateTimeField::new('date_enregistrement')->hideOnForm(),
+            DateTimeField::new('date_enregistrement')->setFormat('d/M/Y à H:m:s')->hideOnForm(),
         ];
     }
     public function persistEntity(EntityManagerInterface $entityManager, $entityInstance): void
