@@ -26,5 +26,6 @@ nav{
 .partout{
     position:fixed;
     bottom: 0px;
-    
+    max-height: 40vh;
+    width: auto;
 }
