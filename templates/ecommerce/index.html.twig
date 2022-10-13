@@ -11,12 +11,12 @@
   </div>
   </div>
 
-<div class="container text-center mt-4 card border-primary"style=" min-height: 80vh;"> 
+<div class="container-fluid text-center mt-4 card border-primary"style=" min-height: 80vh;"> 
 <div class="row justify-content-md-between p-4">
 {% for item in produits %}
     {% if item.stock > 0 %}
     
-    <div id="responsive" class="card text-white col-3 m-3 border-primary ">
+    <div id="responsive" class="card text-white col-md-3 mx-2 my-1 border-primary ">
     <div class="card-header text-center"> {{ item.titre }} </div>
     <div class="card-body text-center">
         
@@ -24,7 +24,7 @@
         <hr>
         <p>Prix : {{ item.prix }} €</p>
 
-        <a href="{{path('app_show', {id: item.id})}}" class="btn btn-dark"> Commander</a>
+        <a href="{{path('app_show', {id: item.id})}}" class="btn btn-dark col-md-auto"> Commander</a>
     </div>
     </div>
     {% endif %}

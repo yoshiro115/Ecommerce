@@ -9,21 +9,21 @@
             <div class="card-header"> <h3>{{app.user.Pseudo}}</h3></div>
             <div class="card-body container">
             <div class="row">
-            <h4 class="card-title col-12">Vos informations</h4>
+            <h4 class="card-title col-md-12">Vos informations</h4>
                 <br><hr><br>
-                <h4 class="subtitle col-6">Nom : {{app.user.nom}}</h4>
-                <h4 class="subtitle col-6">Prenom : {{app.user.prenom}}</h4>
+                <h4 class="subtitle col-md-6">Nom : {{app.user.nom}}</h4>
+                <h4 class="subtitle col-md-6">Prenom : {{app.user.prenom}}</h4>
                 
-                <h4 id="responsive" class="col-6 subtitle">Email : {{app.user.email}}</h4>
-                <h4 class="col-6 subtitle">Civilité : {{app.user.civilite}}</h4>            
+                <h4 id="responsive" class="col-md-6 subtitle">Email : {{app.user.email}}</h4>
+                <h4 class="col-md-6 subtitle">Civilité : {{app.user.civilite}}</h4>            
                 
 
             </div>
             </div>
             <div class="container">
                 <div class="row">
-                <div class="col-10"></div>
-                    <div class="col-2"><a href="#" class="btn btn-primary">Modifier son Compte</a></div>
+                <div class="col-md-10"></div>
+                    <div class="col-md-auto"><a href="#" class="btn btn-primary">Modifier son Compte</a></div>
                 </div>
             </div>
         </div>
@@ -43,8 +43,8 @@
                 </p>
                 <div class="container">
                     <div class="row">
-                        <div class="col-10">Etat de la commande : {{commande.etat}}</div>
-                        <div class="col-2"><h5>Prix Total : {{ commande.montant }}€</h5></div>
+                        <div class="col-md-10">Etat de la commande : {{commande.etat}}</div>
+                        <div class="col-md-auto"><h5>Prix Total : {{ commande.montant }}€</h5></div>
                     </div>
                 </div>
     {% set total = total + commande.montant %}           
@@ -61,8 +61,8 @@
                 </p>
                 <div class="container">
                     <div class="row">
-                        <div class="col-10">Etat de la commande : {{commande.etat}}</div>
-                        <div class="col-2"><h5>Prix Total : {{ commande.montant }}€</h5></div>
+                        <div class="col-md-10">Etat de la commande : {{commande.etat}}</div>
+                        <div class="col-md-auto"><h5>Prix Total : {{ commande.montant }}€</h5></div>
                     </div>
                 </div>
 {% set total = commande.montant %}
@@ -80,8 +80,8 @@
                 </p>
                 <div class="container">
                     <div class="row">
-                        <div class="col-10">Etat de la commande : {{commande.etat}}</div>
-                        <div class="col-2"><h5>Prix Total : {{ commande.montant }}€</h5></div>
+                        <div class="col-md-10">Etat de la commande : {{commande.etat}}</div>
+                        <div class="col-md-auto"><h5>Prix Total : {{ commande.montant }}€</h5></div>
                     </div>
                 </div>
 {% set total = commande.montant %}

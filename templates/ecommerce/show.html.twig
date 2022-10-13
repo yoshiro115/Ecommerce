@@ -19,10 +19,10 @@
   </div>
   <div class="container">
   <div class="row justify-content-between">
-  <div class="card-footer col-3 text-muted text-center">
+  <div class="card-footer col-md-3 text-muted text-center">
     (Ecrit le {{ produit.dateenregistrement|date("d/m/Y à H:i:s") }})
   </div>
-  <h5 class="card-title col-3"> Prix : {{ produit.prix }} € </h5>
+  <h5 class="card-title col-md-3"> Prix : {{ produit.prix }} € </h5>
 </div></div></div>
 
 <form method="POST" action="{{ path('cart_add', {id: produit.id }) }}" class="form-inline d-inline-block" >
